@@ -6,7 +6,7 @@ namespace AppWebVitoria.Configs
     {
         private readonly string _connectionString;
         // A IConfiguration é injetada automaticamente e permite ler o appsettings.json
- public Conexao(IConfiguration configuration)
+        public Conexao(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("MySqlConnection") ?? "";
         }
@@ -18,10 +18,10 @@ namespace AppWebVitoria.Configs
             return conn;
         }
         // Cria um comando SQL. Se nenhuma conexão for passada, abre uma nova.
- public MySqlCommand CreateCommand(string query, MySqlConnection? conn = null)
+        public MySqlCommand CreateCommand(string query, MySqlConnection? conn = null)
         {
             conn ??= GetConnection();
-            return new MySqlCommand(query, conn); 
+            return new MySqlCommand(query, conn);
         }
 
     }
