@@ -1,7 +1,5 @@
 ﻿using AppWebVitoria.Configs;
 using AppWebVitoria.Model;
-using AppWebVitoria.Configs;
-using AppWebVitoria.Model;
 using MySql.Data.MySqlClient;
 
 namespace AppWebVitoria.DAO
